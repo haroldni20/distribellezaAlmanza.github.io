@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(white, #586870);    
+}
+
+header{
+    background-color: rgba(12, 12, 12, 0.603);
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    z-index: 3;
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 2px 2px;
+}
+
+header label:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end;   
+}
+
+header ul li{
+    list-style: none;
+    position: relative;
+}
+header ul li a:hover{
+    display: block;
+    background-color: rgba(12, 12, 12, 0.603);
+}
+header h2{
+    float: left;
+    text-align: center;
+    align-self: center;
+    color: whitesmoke;
+}
+
+.logo-letra{
+    display: flex;
+    padding: 2rem 1rem;
+}
+.logo{
+    display: flex;
+    width: 50px;
+}
+
+header ul li a{
+    display: block;
+    padding: 1rem 1rem;
+    line-height: 3rem;
+    background-color: transparent;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+header ul li ul{
+    display: none;
+    position: absolute;
+    background-color: rgba(12, 12, 12, 0.603);
+    z-index: 2;
+}
+
+header ul li:hover ul{
+    display: block; 
+}
+
+header ul li ul li{
+    
+    width: 100%;
+}
+
+header ul li ul li a{
+    display: block;
+    padding: 0.75rem 2rem;
+    line-height: unset;
+    white-space: nowrap;
+}
+header ul li ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.1);   
+    color: white;
+}
+
+.section__intro--img{
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+}
+p:hover{
+    transition: 2s linear;
+}
+.section__intro p{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 10rem 0;
+    font-size: 2.5em;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px 40px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+    transform: scale(0);
+    transition: all 700ms;
+}
+
+.section__intro:hover p{
+    transform: scale(1);
+    transition: all 700ms;
+}
+
+.section__men , .section__intro , .section__women,.section__pets{
+    width: 100%;
+    height: 50rem;
+    background-size: 100% 30rem;
+    position: relative;
+  
+}
+
+.section__men1{
+    width: 100%;
+    height: 32rem;
+    background-image: url(barba-hombre.jpg);
+    background-size: 100% 32rem;
+    position: relative;
+  
+}
+
+.section__men h1, .section__women h1 ,.section__pets h1{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 18rem 1rem;
+    font-size: 9em;
+    color: whitesmoke;
+    border-radius: 20px;
+    padding: 12px 40px;
+    cursor: pointer;
+    text-decoration: none;  
+}
+h1 a, h2 a{
+    color: whitesmoke;
+    text-decoration: none;
+    text-shadow: 1px 2px rgba(12, 12, 12, 0.603);
+}
+.section__men--img{
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    z-index: -1;
+}
+.section__women--img{
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    z-index: -1;
+}
+.section__pets--img{
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    z-index: -1;
+}
+.footer{
+    background: radial-gradient(#586870, #1d1e1fcc);
+    width: 100vw;
+    height: 4em;
+}
+
+.footer ul{
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 40%;
+    padding: 3px;
+    border-radius: 60px;
+    width: 20%;
+}
+
+.footer ul li{
+ list-style: none;
+ position: relative;
+ padding: 5px 9px;
+ border-radius: 21px;
+}
+
+.footer ul li a{   
+    
+    text-decoration: none;
+}
+.icon-facebook, .icon-instagram{
+    
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.icon-facebook:hover, .icon-instagram:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 1px 1px 2px rgb(226, 175, 36);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.carousel {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    overflow-y: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel__container {
+    white-space: nowrap;    
+    padding-bottom: 2px;
+  }
+  
+  .carousel-item {
+    background-color: palevioletred;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 2px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center;
+    position: relative;
+  }
+  
+  .carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+  }
+  
+  .carousel__container:hover .carousel-item {
+    opacity: 0.3;
+  }
+  
+  .carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  .carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    color: white;
+    margin: 0;
+  }
+  
+  .carousel-item__details:hover .carousel-item__details--img:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    background: none;
+  }
+  
+  .carousel-item__details--img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  
+  .carousel-item__details p {
+    margin: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Muli", sans-serif;
+  }
+
+@media (max-width:768px){
+
+    header{
+        height: 54px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    header label{
+        display: inline-block;
+    }
+    .logo-letra{
+        position: absolute;
+        display: block;
+        padding: 10px;
+        margin-left: 50px;
+    }
+    .menu{
+        background-color: rgba(12, 12, 12, 0.603);
+        position: absolute;
+        width: 70%;
+        margin-left: -100%;
+        transition: all 0.5s;
+
+    }
+    .menu i, .section__intro p{
+        display: none;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+ 
+    header ul li ul li a{
+        display: none;
+    }
+    .section__men--img, .section__women--img, .section__pets--img, body{
+        width: 100%;
+    }
+    .section__men h1, .section__women h1 ,.section__pets h1{
+        font-size: 2em;
+    }
+
+}
+.formulario__contactanos{
+    width: 100vw;
+    height: 100vh;
+    background-image:url(adorable-animal-blurred-background-canine-289252.jpg);
+    background-size: 100% 50rem;
+    display: flex;
+    margin: 0;
+}
+.formulario__contactanos--titulo{
+    background-color: rgba(65,0,0,0.6);
+    width: 30vw;
+    justify-content: center;
+    align-self: center;
+    padding: 12px;
+    margin: auto;
+    border-radius: 7px;
+    text-decoration: none;
+    
+}
+.formulario__contactanos--titulo h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.formulario__contactanos--titulo input{
+    width: 100%;
+    padding: 9px;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 60px;
+    max-height: 100px;
+    margin-bottom: 7px;
+}
+#boton__enviar_formulario{
+    background-color: rgba(65,0,0,0.6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#boton__enviar_formulario:hover{
+    background-color: rgba(80,0,0);
+    color:#fff;
+    font-weight: bold;
+}
+
+.texto{
+    text-align: center;
+    color: white;
+}
+.input__file{
+    position: relative;
+    margin-bottom: 7px;
+    padding: 10px;
+    width: 45%;
+    background-color:rgba(100,25,25,0.7);
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(80,0,0);
+}
+.input__file:hover{
+    background-color: rgba(80,0,0);
+}
+input#cargar__foto{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    
+}
+input:focus, textarea:focus{
+    outline: none;
+}
